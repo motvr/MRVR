@@ -1,35 +1,51 @@
 import asyncio
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+import random
+from AnonXMusic.misc import SUDOERS
+from pyrogram.types import (Message,InlineKeyboardButton,InlineKeyboardMarkup,CallbackQuery,ChatPrivileges)
 from pyrogram import filters, Client
 from AnonXMusic import app
+from config import *
 
-# Replace the following line with your actual OWNER_ID
-OWNER_ID = 123456789
+bot_name = {}
+botname = {}
 
-@app.on_message(filters.command(['بوت'], prefixes=""))
-async def Italymusic(client: Client, message: Message):
-    me = await client.get_me()
-    bot_username = me.username
-    bot_name = me.first_name
-    italy = message.from_user.mention
-    button = InlineKeyboardButton("اضف البوت الي مجموعتك🏅", url=f"https://t.me/{bot_username}?startgroup=true")
-    keyboard = InlineKeyboardMarkup([[button]])
-    user_id = message.from_user.id
-    chat_id = message.chat.id
-    try:
-        member = await client.get_chat_member(chat_id, user_id)
-        if user_id == 5089553588:
-             rank = "يالهوي ده مالك السورس بنفسو ياعيال في البار😱⚡️"
-        elif user_id == OWNER_ID:
-             rank = "مـالك الـبوت العظمه 🫡⚡️"
-        elif member.status == 'creator':
-             rank = "مـالك الـبـار 🫡⚡️"
-        elif member.status == 'administrator':
-             rank = "مـشـرف الـبـار🫡⚡️"
-        else:
-             rank = "لاسف انت عضو فقير🥺💔"
-    except Exception as e:
-        print(e)
-        rank = "مش عرفنلو مله ده😒"
-        await message.reply_text(
-        text=f"""نعم حبيبي : {italy} 🥰❤️\n**انا اسمي القميل : {bot_name} 🥺🙈\n**رتبتك هي : {rank}""", reply_markup=keyboard)
+name = "فير"
+
+@app.on_message(filters.command(["تعيين اسم البوت"])& filters.private & SUDOERS, group=39)
+async def set_bot_name(client, message):
+    global name
+    ask = await app.ask(message.chat.id,"ارسل الاسم الجديد", timeout=39)
+    name = ask.text
+    await message.reply_text("تم تعيين الاسم بنجاح")
+
+almortagel_responses = [
+    "اسمي {name} يصحبي",
+    "يسطا قولتلك اسمي {name} الاه",
+    "نعم يحب",
+    "قول يقلبو",
+    "يسطا هوا عشان بحبك تصعدني؟",
+    "يعم والله بحبك بس ناديلي ب {name}",
+    "تعرف بالله هحبك أكتر لو ناديتلي {name}",
+    "اي ي معلم مين مزعلك",
+    "متصلي على النبي كدا",
+    "مش فاضيلك نصايح وكلمني",
+    "يسطا قولي مين مزعلك وعايزك تقعد وتتفرج على أخوك",
+    "انجز عايزني أشقطلك مين؟",
+    "شكلها منكدا عليك وجاي تطلعهم علينا",
+    "ورحمة أبويا اسمي {name}",
+]
+
+@app.on_message(filters.command(["بوت", "البوت"], ""))
+async def almortagel_bot(client, message):
+    global name
+    bot_username = (await app.get_me()).username
+    bar = random.choice(almortagel_responses).format(name=name)
+    keyboard = InlineKeyboardMarkup([
+        [InlineKeyboardButton("خدني لجروبك والنبي🥺♥", url=f"https://t.me/{bot_username}?startgroup=True")]
+    ])
+
+    await message.reply_text(
+       text=f"[{bar}](https://t.me/{bot_username}?startgroup=True)",
+       disable_web_page_preview=True,
+        reply_markup=keyboard
+    )
