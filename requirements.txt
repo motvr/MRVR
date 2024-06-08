@@ -20,9 +20,13 @@ speedtest-cli
 spotipy
 tgcrypto
 unidecode
-yt-dlp
+yt-dlp==2024.5.27
 youtube-search
 youtube-search-python
+wget
+kvsqlite 
+pytz
+enums
 telegraph
 pytz
 lyricsgenius
