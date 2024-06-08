@@ -8,9 +8,9 @@ from pyrogram import filters
 from pyrogram import Client
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AnonXMusic import app
-from AnonXMusic.plugins.play.filters import command
+from VeGaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from VeGaMusic import app
+from VeGaMusic.plugins.play.filters import command
 from telegraph import upload_file
 from asyncio import gather
 from pyrogram.errors import FloodWait
@@ -104,13 +104,10 @@ async def iddd(client, message):
 
 
 iddof = []
-@app.on_message(
-    filters.command(["قفل جمالي","تعطيل جمالي"], "")
-& filters.group
-)
-async def lllock(client, message):
-   get = await app.get_chat_member(message.chat.id, message.from_user.id)
-   if get.status in ["creator", "administrator"]:
+@app.on_message(command(["قفل جمالي", "تعطيل جمالي"]), group=22332)
+async def iddlock(client, message):
+   get = await client.get_chat_member(message.chat.id, message.from_user.id)
+   if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
       if message.chat.id in iddof:
         return await message.reply_text("جمالي معطل من قبل✅")
       iddof.append(message.chat.id)
@@ -118,14 +115,11 @@ async def lllock(client, message):
    else:
       return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
 
-@app.on_message(
-    filters.command(["فتح جمالي","تفعيل جمالي"], "")
-& filters.group
-)
-async def idljjopen(client, message):
-   get = await app.get_chat_member(message.chat.id, message.from_user.id)
-   if get.status in ["creator", "administrator"]:
-      if not message.chat.id in iddof:
+@app.on_message(command(["قفل جمالي", "تعطيل جمالي"]), group=222009)
+async def iddlock(client, message):
+   get = await client.get_chat_member(message.chat.id, message.from_user.id)
+   if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
+      if message.chat.id in iddof:
         return await message.reply_text("جمالي مفعل من قبل✅")
       iddof.remove(message.chat.id)
       return await message.reply_text("تم فتح جمالي بنجاح ✅🔓")
@@ -135,11 +129,8 @@ async def idljjopen(client, message):
 
 
 
-@app.on_message(
-    filters.command(["جمالي"], "")
-& filters.group
-)
-async def idjjdd(client, message):
+@app.on_message(command(["جمالي","جمالو","ج"]), group=22452)
+async def iddyyyd(client, message):
     if message.chat.id in iddof:
       return
     usr = await client.get_chat(message.from_user.id)
@@ -147,7 +138,7 @@ async def idjjdd(client, message):
     i = ["0","10", "15","20", "25","30","35", "40","45", "50","55", "60"," 66", "70","77", "80","85", "90","99", "100","1000" ]
     ik = random.choice(i)
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"نسبه جمالك يا مز انت \n│ \n└ʙʏ: {ik} %😂❤️", 
+    await message.reply_photo(photo,       caption=f"نسبه جمالك يا مز انت \n│ \n└ʙʏ: {ik} %😂🥀❄️", 
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -157,9 +148,6 @@ async def idjjdd(client, message):
             ]
         ),
     )
-       
-
-
        
 
 
