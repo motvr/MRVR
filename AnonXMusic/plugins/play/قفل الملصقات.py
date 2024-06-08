@@ -4,7 +4,7 @@ from pyrogram import Client
 from strings.filters import command
 import asyncio
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from strings.filters import command
+from AnonXMusic.plugins.play.filters import command
 from AnonXMusic import app
 from pyrogram import Client, filters
 from pyrogram.types import Message
