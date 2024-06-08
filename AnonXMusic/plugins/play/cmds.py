@@ -3,7 +3,7 @@ import os
 import requests
 import pyrogram
 from pyrogram import Client, filters, emoji
-from strings.filters import command
+from AnonXMusic.plugins.play.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from pyrogram.errors import MessageNotModified
 from AnonXMusic import app
