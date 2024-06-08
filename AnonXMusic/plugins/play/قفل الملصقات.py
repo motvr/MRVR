@@ -1,7 +1,7 @@
 from AnonXMusic import app
 from pyrogram import enums
 from pyrogram import Client
-from strings.filters import command
+from AnonXMusic.plugins.play.filters import command
 import asyncio
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from AnonXMusic.plugins.play.filters import command
