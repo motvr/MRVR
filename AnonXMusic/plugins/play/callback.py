@@ -1,6 +1,6 @@
 import asyncio
 from pyrogram import Client, filters
-from strings.filters import command
+from AnonXMusic.plugins.play.filters import command
 from pyrogram.types import InlineKeyboardButton, CallbackQuery, InlineKeyboardMarkup, Message
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
