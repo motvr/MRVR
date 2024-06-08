@@ -6,6 +6,8 @@ from pyrogram import filters, Client
 from AnonXMusic import app
 from config import *
 
+
+
 bot_name = {}
 botname = {}
 
@@ -45,7 +47,7 @@ async def almortagel_bot(client, message):
     ])
 
     await message.reply_text(
-       text=f"[{bar}](https://t.me/{bot_username}?startgroup=True)",
+       text=f"{bar}",
        disable_web_page_preview=True,
         reply_markup=keyboard
     )
