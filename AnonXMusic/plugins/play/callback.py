@@ -15,7 +15,7 @@ from AnonXMusic import app as Client
 @Client.on_callback_query(filters.regex("zzzback"))
 async def zzzback(_, query: CallbackQuery):
    await query.edit_message_text(
-       f"""<b>» مرحبـاً بك عـزيـزي</b>\n<b>» استخـدم الازرار بالاسفـل\n» لـ تصفـح اوامـر بـوت دارك</b>""",
+       f"""<b>» مرحبـاً بك عـزيـزي</b>\n<b>» استخـدم الازرار بالاسفـل\n» لـ تصفـح اوامـر بـوت فير</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -42,7 +42,7 @@ async def zzzback(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("zzzdv") & SUDOERS)
 async def mpdtsf(_, query: CallbackQuery):
    await query.edit_message_text(
-       f"""<b>» مرحبـاً بك عـزيـزي المطـور </b>\n\n<b>» استخـدم الازرار بالاسفـل\n» لـ تصفـح اوامـر بـوت دارك</b>""",
+       f"""<b>» مرحبـاً بك عـزيـزي المطـور </b>\n\n<b>» استخـدم الازرار بالاسفـل\n» لـ تصفـح اوامـر بـوت فير</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
