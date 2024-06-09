@@ -1,4 +1,3 @@
-
 import random
 import string
 
@@ -32,8 +31,9 @@ from config import BANNED_USERS, lyrical
         [
             "شغل",
             "تشغيل",
+            "تش",
             "فيد",
-            "/play",
+            "فيديو",
             "/play",
             "/vplay",
             "/cplay",
@@ -65,8 +65,8 @@ async def play_commnd(
     slider = None
     plist_type = None
     spotify = None
-    user_id = message.from_user.id if message.from_user else "5449190469"
-    user_name = message.from_user.first_name if message.from_user else "None"
+    user_id = message.from_user.id if message.from_user else "1121532100"
+    user_name = message.from_user.first_name if message.from_user else "المشـرف"
     audio_telegram = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
@@ -190,6 +190,7 @@ async def play_commnd(
                     details["duration_min"],
                 )
         elif await Spotify.valid(url):
+            user_mention = message.from_user.mention if message.from_user.mention else "المشـرف"
             spotify = True
             if not config.SPOTIFY_CLIENT_ID and not config.SPOTIFY_CLIENT_SECRET:
                 return await mystic.edit_text(
@@ -211,7 +212,7 @@ async def play_commnd(
                 streamtype = "playlist"
                 plist_type = "spplay"
                 img = config.SPOTIFY_PLAYLIST_IMG_URL
-                cap = _["play_11"].format(app.mention, message.from_user.mention)
+                cap = _["play_11"].format(app.mention, user_mention)
             elif "album" in url:
                 try:
                     details, plist_id = await Spotify.album(url)
@@ -220,7 +221,7 @@ async def play_commnd(
                 streamtype = "playlist"
                 plist_type = "spalbum"
                 img = config.SPOTIFY_ALBUM_IMG_URL
-                cap = _["play_11"].format(app.mention, message.from_user.mention)
+                cap = _["play_11"].format(app.mention, user_mention)
             elif "artist" in url:
                 try:
                     details, plist_id = await Spotify.artist(url)
@@ -249,7 +250,7 @@ async def play_commnd(
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "playlist"
                 plist_type = "apple"
-                cap = _["play_12"].format(app.mention, message.from_user.mention)
+                cap = _["play_12"].format(app.mention, user_mention)
                 img = url
             else:
                 return await mystic.edit_text(_["play_3"])
@@ -666,4 +667,3 @@ async def slider_queries(client, CallbackQuery, _):
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
         )
-
