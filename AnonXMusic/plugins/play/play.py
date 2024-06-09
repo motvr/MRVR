@@ -1,6 +1,8 @@
+
 import random
 import string
 
+from AnonXMusic.plugins.play.filters import command
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
@@ -26,20 +28,21 @@ from config import BANNED_USERS, lyrical
 
 
 @app.on_message(
-    filters.command(
+    command(
         [
-            "play",
-            "تشغيل",
             "شغل",
-            "vplay",
-            "فديو",
-            "cplay",
-            "cvplay",
-            "playforce",
-            "vplayforce",
-            "cplayforce",
-            "cvplayforce",
-        ],""
+            "تشغيل",
+            "فيد",
+            "/play",
+            "/play",
+            "/vplay",
+            "/cplay",
+            "/cvplay",
+            "/playforce",
+            "/vplayforce",
+            "/cplayforce",
+            "/cvplayforce",
+        ]
     )
     & ~BANNED_USERS
 )
@@ -62,7 +65,7 @@ async def play_commnd(
     slider = None
     plist_type = None
     spotify = None
-    user_id = message.from_user.id if message.from_user else "1121532100"
+    user_id = message.from_user.id if message.from_user else "5449190469"
     user_name = message.from_user.first_name if message.from_user else "None"
     audio_telegram = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
@@ -347,7 +350,7 @@ async def play_commnd(
                     _,
                     track_id,
                     user_id,
-                    "v" if video else "a",
+                    "ف" if video else "a",
                     "c" if channel else "g",
                     "f" if fplay else "d",
                 )
@@ -481,7 +484,7 @@ async def play_music(client, CallbackQuery, _):
             _["play_13"],
             reply_markup=InlineKeyboardMarkup(buttons),
         )
-    video = True if mode == "v" else None
+    video = True if mode == "ف" else None
     ffplay = True if fplay == "f" else None
     try:
         await stream(
@@ -504,10 +507,10 @@ async def play_music(client, CallbackQuery, _):
 
 
 @app.on_callback_query(filters.regex("AnonymousAdmin") & ~BANNED_USERS)
-async def Anonymous_check(client, CallbackQuery):
+async def anonymous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
-            "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
+            "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
             show_alert=True,
         )
     except:
@@ -546,7 +549,7 @@ async def play_playlists_command(client, CallbackQuery, _):
         _["play_2"].format(channel) if channel else _["play_1"]
     )
     videoid = lyrical.get(videoid)
-    video = True if mode == "v" else None
+    video = True if mode == "ف" else None
     ffplay = True if fplay == "f" else None
     spotify = True
     if ptype == "yt":
@@ -663,3 +666,4 @@ async def slider_queries(client, CallbackQuery, _):
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
         )
+
