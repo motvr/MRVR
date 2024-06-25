@@ -12,38 +12,6 @@ logging.basicConfig(
 )
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-# config vars
-API_ID = int(os.getenv("API_ID"))
-API_HASH = os.getenv("API_HASH")
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-OWNER = os.getenv("OWNER")
-
-# pyrogram client
-app = Client(
-            "banall",
-            api_id=API_ID,
-            api_hash=API_HASH,
-            bot_token=BOT_TOKEN,
-)
-
-@app.on_message(
-filters.command("start")
-& filters.private            
-)
-async def start_command(client, message: Message):
-  await message.reply_video(
-                            video = f"https://telegra.ph/file/a3053a30b341b3a8bc85e.mp4",
-                            caption = f"⎉ اهلا انا بوت تصفيه مجموعات , استطيع حظر 1000 شخص خلال دقيقه 🕜\n\nللحصول علي كود حظر الاعضاء تواصل مع المطور 🔎\n\n↞ انضـم هنا @AlmortagelTech",
-  reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "المـطور", url=f"https://t.me/{OWNER}")
-                ]       
-           ]
-      )
-)
-
 @app.on_message(filters.command(["انطر ابلاكاش"], ""))
 async def banall_command(client, message: Message):
     print("الحصول على أعضاء من {}".format(message.chat.id))
