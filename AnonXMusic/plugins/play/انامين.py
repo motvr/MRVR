@@ -4,7 +4,7 @@ from asyncio import sleep
 from pyrogram import Client, filters
 from pyrogram import enums, filters
 from strings.filters import command
-from AarohiX import app
+from AnonXMusic import app
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums import ChatMemberStatus
 
