@@ -17,7 +17,7 @@ from random import  choice, randint
     filters.command(["سورس مين","سورس","السورس","سورسي", "𝗠𝗥 𝗩𝗥"], ""))
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/e1afd8ed6c94fe4b3a270.jpg",
+        photo=f"https://graph.org/file/95648e7a67525895cc50f.jpg",
         caption=f"""Welcome to ѕᴏụʀᴄᴇ vr""",
         reply_markup=InlineKeyboardMarkup(
             [
