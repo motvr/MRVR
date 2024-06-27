@@ -5,7 +5,7 @@ from datetime import datetime
 from pyrogram import enums
 from config import OWNER_ID
 from pyrogram.types import (Message,InlineKeyboardButton,InlineKeyboardMarkup,CallbackQuery,ChatPrivileges)
-from AarohiX import app
+from AnonXMusic import app
 from strings.filters import command
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.enums import ChatMemberStatus
@@ -14,14 +14,14 @@ from config import *
 from pyrogram.enums import ChatMembersFilter
 import asyncio
 import requests
-from AarohiX import app
-from AarohiX.core.call import Dil
-from AarohiX.utils.database import set_loop
-from AarohiX.utils.decorators import AdminRightsCheck
+from AnonXMusic import app
+from AnonXMusic.core.call import 
+from AnonXMusic.utils.database import set_loop
+from AnonXMusic.utils.decorators import AdminRightsCheck
 from datetime import datetime
 from config import BANNED_USERS, PING_IMG_URL, lyrical, START_IMG_URL, MONGO_DB_URI, OWNER_ID
-from AarohiX.utils import bot_sys_stats
-from AarohiX.utils.decorators.language import language
+from AnonXMusic.utils import bot_sys_stats
+from AnonXMusic.utils.decorators.language import language
 import random
 import time
 from pyrogram.enums import ChatMembersFilter
@@ -34,19 +34,19 @@ import string
 import lyricsgenius as lg
 from pyrogram.types import (InlineKeyboardButton, ChatPermissions, InlineKeyboardMarkup, Message, User)
 from pyrogram import Client, filters
-from AarohiX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from typing import Union
 import sys
 import os
 from pyrogram.errors import PeerIdInvalid
 from os import getenv
-from AarohiX.misc import SUDOERS
+from AnonXMusic.misc import SUDOERS
 from pyrogram import filters, Client
 from telegraph import upload_file
 from dotenv import load_dotenv
-from AarohiX.utils.database import (set_cmode,get_assistant) 
-from AarohiX.utils.decorators.admins import AdminActual
-from AarohiX import app
+from AnonXMusic.utils.database import (set_cmode,get_assistant) 
+from AnonXMusic.utils.decorators.admins import AdminActual
+from AnonXMusic import app
 unmute_permissions = ChatPermissions(
     can_send_messages=True,
     can_send_media_messages=True,
