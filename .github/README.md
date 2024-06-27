@@ -1,9 +1,9 @@
 <h2 align="center">
-    ──「 ᴀɴᴏɴ ダ ᴍᴜsɪᴄ 」──
+    ──「 ❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞ 」──
 </h2>
 
 <p align="center">
-  <img src="https://telegra.ph/file/56d1760224589ee370186.jpg">
+  <img src="https://graph.org/file/95648e7a67525895cc50f.jpg">
 </p>
 
 <p align="center">
