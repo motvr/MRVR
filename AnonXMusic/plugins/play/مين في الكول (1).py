@@ -1,12 +1,12 @@
 from pyrogram import filters, Client
-from VeGaMusic import app
-from VeGaMusic.plugins.play.filters import command
+from AnonXMusic import app
+from AnonXMusic.plugins.play.filters import command
 import asyncio
 from pyrogram.types import VideoChatEnded, Message
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from VeGaMusic.core.call import Zoro
-from VeGaMusic.utils.database import *
+from AnonXMusic.core.call import Zoro
+from AnonXMusic.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError,AlreadyJoinedError)
 
 @app.on_message(filters.regex("مين في الكول"))
