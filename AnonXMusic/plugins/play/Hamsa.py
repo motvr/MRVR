@@ -2,7 +2,7 @@ from pyrogram import enums
 from pyrogram import types
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from ZelzalMusic import app
+from AnonXMusic import app
 
 hmses = {}
 
@@ -56,7 +56,7 @@ async def send_hms(client, message):
                     InlineKeyboardButton("‹ اضغط لرؤية الهمسه 🍀 ›", callback_data="hms_answer"),
                 ],[
                     InlineKeyboardButton(
-                        "‹ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐄𝐈𝐑𝐓𝐇𝐎𝐍 ›", url=f"http://t.me/EIRTHON"),
+                        "‹ ❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞ ›", url=f"http://t.me/Jaithon"),
             ]
         ]                   
 
