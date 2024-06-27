@@ -21,9 +21,9 @@ from dotenv import load_dotenv
 @app.on_message(filters.command(["اصدار"], ""))
 async def bkouqw(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/14c7948ad180050fe16e4.jpg",
-        caption=f"""**⋖━━❲𖣂❳━━●○ᴀʟᴍᴏʀᴛᴀɢᴇʟ○●━━❲𖣂❳━━⋗**\nمرحبا بك عزيزي {message.from_user.mention}\n
-♡♕᚜ اسم سورس:-المرتجل
+        photo=f"https://graph.org/file/95648e7a67525895cc50f.jpg",
+        caption=f"""**❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞**\nمرحبا بك عزيزي {message.from_user.mention}\n
+♡♕᚜ اسم سورس:-الصياد
 ♡♕᚜ نوعه:-ميوزك
 ♡♕᚜ للغه برمجه:- بايثون
 ♡♕᚜ اللغه:-اللغه العربيه ويدعم الانجليزيه 
@@ -32,12 +32,12 @@ async def bkouqw(client: Client, message: Message):
 ♡♕᚜ الاصدار 4.0.1 pyrogram 
 ♡♕᚜ تاريخ تاسيس:-10-4-2020
 
-**⋖━━❲𖣂❳━━●○ᴀʟᴍᴏʀᴛᴀɢᴇʟ○●━━❲𖣂❳━━⋗**""",
+**❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "●━◉⟞⟦ ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ ⟧⟝◉━●", url=f"https://t.me/AlmortagelTech"), 
+                        "❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞", url=f"https://t.me/Jaithon"), 
                ],
           ]
         ),
