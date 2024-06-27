@@ -15,11 +15,11 @@ from random import  choice, randint
 #          
                 
 @app.on_message(
-    filters.command(["المبرمج","الصياد","مبرمج السورس"], "")
+    filters.command(["المبرمج","صياد","مبرمج السورس","زين"], "")
 )
 async def huhh(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/e1afd8ed6c94fe4b3a270.jpg",
+        photo=f"https://graph.org/file/95648e7a67525895cc50f.jpg",
         caption=f"""**⩹━★⊷━⌞ 𝗦𝗼𝘂𝗿𝗰𝗲 𝗩𝗥⌝━⊶★━⩺**\nمرحبا بك عزيزي {message.from_user.mention} في قسم المبرمج\nللتحدث مع السورس السورس اضغط علي الازرار بالاسفل👇\n**⩹━★⊷━⌞ 𝗦𝗼𝘂𝗿𝗰𝗲 𝗩𝗥 ⌝━⊶★━⩺**""",
         reply_markup=InlineKeyboardMarkup(
             [
