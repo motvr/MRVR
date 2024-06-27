@@ -2,7 +2,7 @@ from pyrogram import enums
 from pyrogram import types
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from ZelzalMusic import app
+from AnonXMusic import app
 
 hmses = {}
 
