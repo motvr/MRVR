@@ -22,23 +22,6 @@ async def lllock(client, message):
       return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
 
 @app.on_message(
-    filters.command(["فتح جمالي","تفعيل جمالي"], "")
-& filters.group
-)
-async def idljjopen(client, message):
-   get = await app.get_chat_member(message.chat.id, message.from_user.id)
-   if get.status in ["creator", "administrator"]:
-      if not message.chat.id in iddof:
-        return await message.reply_text("جمالي مفعل من قبل✅")
-      iddof.remove(message.chat.id)
-      return await message.reply_text("تم فتح جمالي بنجاح ✅🔓")
-   else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
-
-
-
-
-@app.on_message(
     filters.command(["جمالي"], "")
 & filters.group
 )
