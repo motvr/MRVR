@@ -6,7 +6,7 @@ from AnonXMusic import app
 import re
 import sys
 
-GAME_MESSAGE = "⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞\n\n★¦ مرحبا بك عزيزي:\n★¦في قسم العاب الصياد\n\n⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞"
+GAME_MESSAGE = "❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞\n\n★¦ مرحبا بك عزيزي:\n★¦في قسم العاب الصياد\n\n⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞"
 GAME_BUTTONS = [
     [ 
         InlineKeyboardButton ('★¦العاب 3D', callback_data= 'GAME1'),
@@ -378,7 +378,7 @@ async def callback_query(client, CallbackQuery):
                     )
           elif CallbackQuery.data == "GAME2":
                
-               SOURCE_GAME = "⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞\n\n★¦العاب الصياد\n★¦كت\n★¦تويت\n★¦اسال\n★¦اصراحه\n\n⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞." 
+               SOURCE_GAME = "❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞\n\n★¦العاب الصياد\n★¦كت\n★¦تويت\n★¦اسال\n★¦اصراحه\n\n⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞." 
 
                SORGAM_BUTTON = [
                     [ 
