@@ -6,13 +6,13 @@ from AnonXMusic import app
 import re
 import sys
 
-GAME_MESSAGE = "⩹━★⊷━⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝━⊶★━⩺\n\n★¦ مرحبا بك عزيزي:\n★¦في قسم العاب المرتجل\n\n⩹━★⊷━⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝━⊶★━⩺"
+GAME_MESSAGE = "⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞\n\n★¦ مرحبا بك عزيزي:\n★¦في قسم العاب الصياد\n\n⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞"
 GAME_BUTTONS = [
     [ 
         InlineKeyboardButton ('★¦العاب 3D', callback_data= 'GAME1'),
-        InlineKeyboardButton ('ᴀʟᴍᴏʀᴛᴀɢᴇʟ', callback_data= 'GAME2'),
+        InlineKeyboardButton ('ꪜَِᖇ', callback_data= 'GAME2'),
         ],[
-        InlineKeyboardButton ('⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝⚡️', url =f"https://t.me/AlmortagelTech")              
+        InlineKeyboardButton ('⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞', url =f"https://t.me/Jaithon")              
                  ],[
                 InlineKeyboardButton(
                         "◁", callback_data="close"),
@@ -306,7 +306,7 @@ async def kaompj(client, message):
 )
 async def zohary(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/14c7948ad180050fe16e4.jpg",
+        photo=f"https://graph.org/file/95648e7a67525895cc50f.jpg",
         caption= GAME_MESSAGE,
         reply_markup=InlineKeyboardMarkup(GAME_BUTTONS)
     )  
@@ -314,7 +314,7 @@ async def zohary(client: Client, message: Message):
 async def callback_query(client, CallbackQuery):
           if CallbackQuery.data == "GAME1":
             
-             GAME1_MESSAGE = "⩹━★⊷━⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝━⊶★━⩺\n\nمرحبا بك في قسم العاب المرتجل 3D\n\n⩹━★⊷━⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝━⊶★━⩺"
+             GAME1_MESSAGE = "⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞\n\n★¦مرحبا بك في قسم العاب الصياد D\n\n⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞"
 
              GAME1_BUTTONS = [
                  [
@@ -358,14 +358,14 @@ async def callback_query(client, CallbackQuery):
               )
           elif CallbackQuery.data == "GAME":
                
-               RETURN_GAME = "⩹━★⊷━⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝━⊶★━⩺\n\n★¦مرحبا بك في قسم العاب المرتجل\n★¦اختار ما تشاء من الالعاب مسليه وستمتع بها\n\n⩹━★⊷━⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝━⊶★━⩺" 
+               RETURN_GAME = "⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞\n\n★¦مرحبا بك في قسم العاب الصياد\n★¦اختار ما تشاء من الالعاب مسليه وستمتع بها\n\n⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞" 
 
                RETURN_BUTTON = [
                     [ 
                       InlineKeyboardButton ('★¦العاب 3D', callback_data= 'GAME1'),
-                      InlineKeyboardButton ('★¦العاب المرتجل', callback_data= 'GAME2')
+                      InlineKeyboardButton ('★¦العاب الصياد', callback_data= 'GAME2')
                       ],[
-        InlineKeyboardButton ('⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝⚡️', url =f"https://t.me/AlmortagelTech")              
+        InlineKeyboardButton ('⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞', url =f"https://t.me/Jaithon")              
                  ],[
                 InlineKeyboardButton(
                         "◁", callback_data="close"),
@@ -378,11 +378,11 @@ async def callback_query(client, CallbackQuery):
                     )
           elif CallbackQuery.data == "GAME2":
                
-               SOURCE_GAME = "⩹━★⊷━⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝━⊶★━⩺\n\n★¦العاب المرتجل\n★¦كت\n★¦تويت\n★¦اسال\n★¦اصراحه\n\n⩹━★⊷━⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝━⊶★━⩺." 
+               SOURCE_GAME = "⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞\n\n★¦العاب الصياد\n★¦كت\n★¦تويت\n★¦اسال\n★¦اصراحه\n\n⩹━★⊷━⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞." 
 
                SORGAM_BUTTON = [
                     [ 
-                      InlineKeyboardButton ('⌞ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ⌝⚡️', url =f"https://t.me/AlmortagelTech")
+                      InlineKeyboardButton ('⌞❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞', url =f"https://t.me/Jaithon")
                       ],[
                          InlineKeyboardButton ('◁', callback_data= 'GAME')
                     ]
