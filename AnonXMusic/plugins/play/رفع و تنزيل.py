@@ -15,7 +15,7 @@ from pyrogram.enums import ChatMembersFilter
 import asyncio
 import requests
 from AnonXMusic import app
-from AnonXMusic.core.call import Zoro
+from AnonXMusic.core.call import Dil
 from AnonXMusic.utils.database import set_loop
 from AnonXMusic.utils.decorators import AdminRightsCheck
 from datetime import datetime
