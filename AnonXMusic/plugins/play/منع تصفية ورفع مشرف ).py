@@ -3,7 +3,7 @@ from pyrogram import enums
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus , ChatType
 from pyrogram.types import ChatPermissions, ChatPrivileges
 import asyncio
-from AarohiX import app
+from AnonXMusic import app
 
 
 
