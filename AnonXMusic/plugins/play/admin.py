@@ -17,7 +17,6 @@ from pyrogram.types import (
 )
 
 from AnonXMusic import app
-from AnonXMusic.core.keyboard import ikb
 from AnonXMusic.utils.dbfunctions import (
     add_warn,
     get_warn,
