@@ -1,10 +1,10 @@
 from pyrogram import filters, Client
-from AarohiX import app
+from AnonXMusic import app
 import asyncio
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from AarohiX.core.call import Dil
-from AarohiX.utils.database import *
+from AnonXMusic.core.call import Anony
+from AnonXMusic.utils.database import *
 from pytgcalls.exceptions import NoActiveGroupCall, TelegramServerError
 #HHC3C4
 @app.on_message(filters.regex("اسم المساعد"))
