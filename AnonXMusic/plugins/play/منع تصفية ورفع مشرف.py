@@ -33,7 +33,7 @@ async def welcome(client, chat_member_updated):
                 try:
                     await client.ban_chat_member(chat_member_updated.chat.id, kicked_by.id)
                 except Exception as e:
-                    message += f"\n\nعذرًا، لم استطع حظر الإداري بسبب: رتبته"
+                    message += f"\n\nعذرًا، لم استطع حظر الإداري بسبب: {str(e)}"
             else:
                 message = f"• المستخدم {user.username} ({user.first_name}) تم طرده من الدردشة"
             
@@ -131,8 +131,3 @@ def promote_g_admin(client, message):
     		message.reply(f"تم رفع {user_id} ادمن بنجاح")
     	#else:
 #    		message.reply("يجب ان تكون مشرف لإستخدام الامر")
-
-app.run() 	 
-
-	 
-
