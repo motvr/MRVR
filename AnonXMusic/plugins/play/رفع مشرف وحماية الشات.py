@@ -12,6 +12,7 @@ from pyrogram.enums import ChatMembersFilter, ChatMemberStatus , ChatType
 from pyrogram import Client, filters
 import json
 import os
+from AnonXMusic import app
 
 
 
