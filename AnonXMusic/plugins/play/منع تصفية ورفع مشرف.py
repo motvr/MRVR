@@ -3,12 +3,6 @@ from pyrogram import enums
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus , ChatType
 from pyrogram.types import ChatPermissions, ChatPrivileges
 import asyncio
-API_ID = 9157919
-API_HASH = "b90c282e584222babde5f68b5b63ee3b"
-BOT_TOKEN = "حط توكنك"
-
-app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
-
 
 
 
