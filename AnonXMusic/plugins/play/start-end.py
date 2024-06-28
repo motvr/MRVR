@@ -1,8 +1,8 @@
 import asyncio
 from pyrogram import Client, filters
-from VeGaMusic.plugins.play.filters import command
+from AnonXMusic.plugins.play.filters import command
 from pyrogram.types import *
-from VeGaMusic import app
+from AnonXMusic import app
 
 @app.on_message(filters.video_chat_started)
 async def brah(client, message):
