@@ -22,7 +22,7 @@ async def must_join_channel(app: Client, msg: Message):
                     f"~︙عزيزي {msg.from_user.mention} \n~︙عليك الأشتراك في قناة البوت \n~︙قناة البوت : @Jaithon",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton(" ❝ 𝗦𝗼𝘂𝗿𝗰𝗲➠𝗩𝗥 ❞ ", url=https://t.me/Jaithon)]
+                        [InlineKeyboardButton("< قناه البوت >", url=)]
                     ])
                 )
                 await msg.stop_propagation()
