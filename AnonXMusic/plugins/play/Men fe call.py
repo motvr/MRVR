@@ -3,7 +3,6 @@ from AnonXMusic import app
 import asyncio
 from pyrogram.types import VideoChatEnded, Message
 from pytgcalls import PyTgCalls, StreamType
-from AnonXMusic.types.input_stream import AudioPiped, AudioVideoPiped
 from AnonXMusic.core.call import Anony
 from AnonXMusic.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall, TelegramServerError, AlreadyJoinedError)
